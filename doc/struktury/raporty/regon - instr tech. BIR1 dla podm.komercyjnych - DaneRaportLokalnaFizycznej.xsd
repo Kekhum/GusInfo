@@ -1,0 +1,305 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="PublDaneRaportLokalnaFizycznej" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+	      <xs:sequence>
+		      <xs:element name="dane">
+			<xs:complexType>
+			  <xs:all>
+			  
+				<xs:element name="lokfiz_regon9" minOccurs="0" maxOccurs="1">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:maxLength value="9"/>
+                         </xs:restriction>
+                    </xs:simpleType>
+			    </xs:element>
+				<xs:element name="lokfiz_regon14" minOccurs="0" maxOccurs="1">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:maxLength value="14"/>
+                         </xs:restriction>
+                    </xs:simpleType>
+				</xs:element>
+				<xs:element name="lokfiz_nazwa" minOccurs="0" maxOccurs="1">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:maxLength value="2000"/>
+                         </xs:restriction>
+                    </xs:simpleType>
+				</xs:element>
+				<xs:element name="lokfiz_silos_Symbol" minOccurs="0" maxOccurs="1">
+                   <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:maxLength value="10"/>
+                         </xs:restriction>
+                    </xs:simpleType>
+				</xs:element>
+				<xs:element name="lokfiz_silos_Nazwa" minOccurs="0" maxOccurs="1">
+                   <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:maxLength value="100"/>
+                         </xs:restriction>
+                    </xs:simpleType>
+				</xs:element>
+				
+				<!-- ADRES SIEDZIBY -->
+		  
+				<xs:element name="lokfiz_adSiedzKraj_Symbol" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="2"/>
+								 </xs:restriction>
+							</xs:simpleType>
+				</xs:element>
+				<xs:element name="lokfiz_adSiedzWojewodztwo_Symbol" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="2"/>
+								 </xs:restriction>
+							</xs:simpleType>
+				</xs:element>
+				<xs:element name="lokfiz_adSiedzPowiat_Symbol" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="2"/>
+								 </xs:restriction>
+							</xs:simpleType>
+				</xs:element>
+				<xs:element name="lokfiz_adSiedzGmina_Symbol" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="3"/>
+								 </xs:restriction>
+							</xs:simpleType>
+				</xs:element>
+				<xs:element name="lokfiz_adSiedzKodPocztowy" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="12"/>
+								 </xs:restriction>
+							</xs:simpleType>
+				</xs:element>
+				<xs:element name="lokfiz_adSiedzMiejscowoscPoczty_Symbol" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="7"/>
+								 </xs:restriction>
+							</xs:simpleType>
+				</xs:element>
+				<xs:element name="lokfiz_adSiedzMiejscowosc_Symbol" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="7"/>
+								 </xs:restriction>
+							</xs:simpleType>
+				</xs:element>
+				<xs:element name="lokfiz_adSiedzUlica_Symbol" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="5"/>
+								 </xs:restriction>
+							</xs:simpleType>
+				</xs:element>
+				<xs:element name="lokfiz_adSiedzNumerNieruchomosci" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="20"/>
+								 </xs:restriction>
+							</xs:simpleType>
+				</xs:element>
+				<xs:element name="lokfiz_adSiedzNumerLokalu" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="10"/>
+								 </xs:restriction>
+							</xs:simpleType>
+				</xs:element>
+				<xs:element name="lokfiz_adSiedzNietypoweMiejsceLokalizacji" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="160"/>
+								 </xs:restriction>
+							</xs:simpleType>
+				</xs:element>
+											
+				<xs:element name="lokfiz_adSiedzKraj_Nazwa" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="200"/>
+								 </xs:restriction>
+							</xs:simpleType>
+				</xs:element>
+				<xs:element name="lokfiz_adSiedzWojewodztwo_Nazwa" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="200"/>
+								 </xs:restriction>
+							</xs:simpleType>
+				</xs:element>
+				<xs:element name="lokfiz_adSiedzPowiat_Nazwa" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="200"/>
+								 </xs:restriction>
+							</xs:simpleType>
+				</xs:element>
+				<xs:element name="lokfiz_adSiedzGmina_Nazwa" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="200"/>
+								 </xs:restriction>
+							</xs:simpleType>
+				</xs:element>
+				<xs:element name="lokfiz_adSiedzMiejscowoscPoczty_Nazwa" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="200"/>
+								 </xs:restriction>
+							</xs:simpleType>
+				</xs:element>
+				<xs:element name="lokfiz_adSiedzMiejscowosc_Nazwa" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="200"/>
+								 </xs:restriction>
+							</xs:simpleType>
+				</xs:element>
+				<xs:element name="lokfiz_adSiedzUlica_Nazwa" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="200"/>
+								 </xs:restriction>
+							</xs:simpleType>
+				</xs:element>
+
+				
+				<xs:element name="lokfiz_dataPowstania" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="10"/>
+								 </xs:restriction>
+							</xs:simpleType>
+				</xs:element>
+				<xs:element name="lokfiz_dataWpisuDoREGON" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="10"/>
+								 </xs:restriction>
+							</xs:simpleType>
+				</xs:element>
+				<xs:element name="lokfiz_dataRozpoczeciaDzialalnosci" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="10"/>
+								 </xs:restriction>
+							</xs:simpleType>
+				</xs:element>
+				<xs:element name="lokfiz_dataZawieszeniaDzialalnosci" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="10"/>
+								 </xs:restriction>
+							</xs:simpleType>
+				</xs:element>
+				<xs:element name="lokfiz_dataWznowieniaDzialalnosci" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="10"/>
+								 </xs:restriction>
+							</xs:simpleType>
+				</xs:element>
+				<xs:element name="lokfiz_dataZaistnieniaZmiany" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="30"/>
+								 </xs:restriction>
+							</xs:simpleType>
+				</xs:element>
+				<xs:element name="lokfiz_dataZakonczeniaDzialalnosci" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="10"/>
+								 </xs:restriction>
+							</xs:simpleType>
+				</xs:element>
+				<xs:element name="lokfiz_dataSkresleniazRegon" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="10"/>
+								 </xs:restriction>
+							</xs:simpleType>
+				</xs:element>
+												
+				<xs:element name="lokfiz_formaFinansowania_Symbol" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="1"/>
+								 </xs:restriction>
+							</xs:simpleType>
+				</xs:element>
+				<xs:element name="lokfiz_formaFinansowania_Nazwa" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="90"/>
+								 </xs:restriction>
+							</xs:simpleType>
+				</xs:element>
+		   
+				<xs:element name="lokfiz_dataWpisuDoRejestruEwidencji" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="10"/>
+								 </xs:restriction>
+							</xs:simpleType>
+				</xs:element>
+				<xs:element name="lokfiz_numerwRejestrzeEwidencji" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="15"/>
+								 </xs:restriction>
+							</xs:simpleType>
+				</xs:element>
+				<xs:element name="lokfiz_organRejestrowy_Symbol" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="9"/>
+								 </xs:restriction>
+							</xs:simpleType>
+				</xs:element>
+				<xs:element name="lokfiz_organRejestrowy_Nazwa" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="240"/>
+								 </xs:restriction>
+							</xs:simpleType>
+				</xs:element>
+				<xs:element name="lokfiz_rodzajRejestru_Symbol" minOccurs="0" maxOccurs="1">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:maxLength value="3"/>
+                         </xs:restriction>
+                    </xs:simpleType>
+				</xs:element>
+				<xs:element name="lokfiz_rodzajRejestru_Nazwa" minOccurs="0" maxOccurs="1">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:maxLength value="240"/>
+                         </xs:restriction>
+                    </xs:simpleType>
+				</xs:element>
+				<xs:element name="lokfiz_dzialalnosci" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:integer">
+								 </xs:restriction>
+							</xs:simpleType>
+				</xs:element>
+			 
+				
+			  </xs:all>
+			</xs:complexType>
+		</xs:element>
+		</xs:sequence>
+   </xs:complexType>
+  </xs:element>
+</xs:schema>
