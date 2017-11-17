@@ -1,8 +1,11 @@
-﻿using GusInfo.Service;
+﻿using System.Runtime.CompilerServices;
+using GusInfo.Service;
 using Newtonsoft.Json;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
 using System.Xml;
+
+[assembly: InternalsVisibleTo("GusInfo.Tests")]
 
 namespace GusInfo
 {
@@ -30,9 +33,39 @@ namespace GusInfo
         {
             nip = NormalizeNip(nip);
 
-            using (var client = new UslugaBIRzewnPublClient(
-                new WSHttpBinding(SecurityMode.Transport) { MessageEncoding = WSMessageEncoding.Mtom },
-                new EndpointAddress(Address)))
+            UslugaBIRzewnPublClient client=null;
+
+#if NETSTANDARD2_0
+            //var a = new MessageEncodingBindingElement();
+            var binding = new CustomBinding();
+            binding.Elements.Add(new TextMessageEncodingBindingElement());
+            binding.Elements.Add(new HttpsTransportBindingElement
+            {
+                AllowCookies = true,
+                MaxBufferSize = int.MaxValue,
+                MaxReceivedMessageSize = int.MaxValue
+            });
+
+            client = new UslugaBIRzewnPublClient(binding, new EndpointAddress(Address));
+#else
+            //client = new UslugaBIRzewnPublClient(
+            //    new WSHttpBinding(SecurityMode.Transport) { MessageEncoding = WSMessageEncoding.Mtom },
+            //    new EndpointAddress(Address));
+            //client = new UslugaBIRzewnPublClient(
+            //    new WSHttpBinding(SecurityMode.Transport) { MessageEncoding = WSMessageEncoding.Mtom },
+            //    new EndpointAddress(Address));
+
+            var binding = new CustomBinding();
+            binding.Elements.Add(new MtomMessageEncodingBindingElement());
+            binding.Elements.Add(new HttpsTransportBindingElement
+            {
+                AllowCookies = true,
+                MaxBufferSize = int.MaxValue,
+                MaxReceivedMessageSize = int.MaxValue
+            });
+
+            client = new UslugaBIRzewnPublClient(binding, new EndpointAddress(Address));
+#endif
             using (var scope = new OperationContextScope(client.InnerChannel))
             {
                 var sid = client.Zaloguj(_userKey);
